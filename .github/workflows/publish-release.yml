@@ -81,7 +81,7 @@ jobs:
         uses: taiki-e/setup-cross-toolchain-action@v1.42.0
         with:
           target: ${{ matrix.target }}
-      - uses: Swatinem/rust-cache@v2.9.1
+      - uses: Swatinem/rust-cache@v2.9.2
         with:
           prefix-key: v1-rust
           shared-key: release-${{ github.repository_id }}-${{ matrix.target }}
