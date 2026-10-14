@@ -109,7 +109,7 @@ jobs:
           mkdir -p dist
           cp "target/${{ matrix.target }}/release/${binary}" "dist/${artifact}"
           (cd dist && openssl dgst -sha256 -r "$artifact" > "$artifact.sha256")
-      - uses: actions/upload-artifact@v7.0.1
+      - uses: actions/upload-artifact@v7.0.2
         with:
           name: ${{ inputs.binary-name }}-${{ matrix.suffix }}
           path: dist/*
